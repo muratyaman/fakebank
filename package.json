@@ -1,0 +1,69 @@
+{
+  "name": "fakebank",
+  "version": "1.0.0",
+  "description": "Fakebank services using Apollo GraphQL Server and Federation, Express, REST, Faker - TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && npm run build:ts",
+    "build:ts": "tsc -b tsconfig.build.json",
+    "clean": "rm -rf dist",
+    "start:gql-fed-accounts": "ts-node src/gql-fed-accounts/index.ts",
+    "start:gql-fed-auth": "ts-node src/gql-fed-auth/index.ts",
+    "start:gql-fed-payments": "ts-node src/gql-fed-payments/index.ts",
+    "start:gql-gateway": "ts-node src/gql-gateway/index.ts",
+    "start:gql-standard": "ts-node src/gql-standard/index.ts",
+    "start:rest-accounts": "ts-node src/rest-accounts/index.ts",
+    "start:rest-auth": "ts-node src/rest-auth/index.ts",
+    "start:rest-payments": "ts-node src/rest-payments/index.ts",
+    "start:gql-fed-accounts:prod": "node dist/gql-fed-accounts/index.js",
+    "start:gql-fed-auth:prod": "node dist/gql-fed-auth/index.js",
+    "start:gql-fed-payments:prod": "node dist/gql-fed-payments/index.js",
+    "start:gql-gateway:prod": "node dist/gql-gateway/index.js",
+    "start:gql-standard:prod": "node dist/gql-standard/index.js",
+    "start:rest-accounts:prod": "node dist/rest-accounts/index.js",
+    "start:rest-auth:prod": "node dist/rest-auth/index.js",
+    "start:rest-payments:prod": "node dist/rest-payments/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muratyaman/fakebank.git"
+  },
+  "keywords": [
+    "apollo",
+    "graphql",
+    "federation",
+    "bank",
+    "banking",
+    "typescript",
+    "express",
+    "faker"
+  ],
+  "author": "Haci Murat Yaman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muratyaman/fakebank/issues"
+  },
+  "homepage": "https://github.com/muratyaman/fakebank#readme",
+  "dependencies": {
+    "@apollo/federation": "^0.24.0",
+    "@apollo/gateway": "^0.28.0",
+    "apollo-datasource-rest": "^0.13.0",
+    "apollo-server": "^2.24.0",
+    "axios": "^0.21.1",
+    "dataloader": "^2.0.0",
+    "express": "^4.17.1",
+    "faker": "^5.5.3",
+    "graphql": "^15.5.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/faker": "^5.5.4",
+    "@types/node": "^15.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
