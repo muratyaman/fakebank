@@ -1,6 +1,6 @@
 {
   "name": "fakebank",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Fakebank services using Apollo GraphQL Server and Federation, Express, REST, Faker - TypeScript",
   "main": "dist/index.js",
   "scripts": {
